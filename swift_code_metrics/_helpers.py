@@ -228,6 +228,7 @@ class ParsingHelpers:
     DEFAULT_FRAMEWORK_NAME = 'AppTarget'
     DEFAULT_TEST_FRAMEWORK_SUFFIX = '_Test'
     TEST_METHOD_PREFIX = 'test'
+    QUICK_TEST_METHOD_PREFIX = 'it'
     FRAMEWORK_STRUCTURE_OVERRIDE_FILE = 'scm.json'
 
     # Constants - Regex patterns
@@ -241,7 +242,7 @@ class ParsingHelpers:
     PROTOCOLS = r'.*protocol (.*?)[:|{|\s]'
     STRUCTS = r'.*struct (.*?)[:|{|\s]'
     CLASSES = r'.*class (.*?)[:|{|\s]'
-    FUNCS = r'.*func (.*?)[:|\(|\s]'
+    FUNCS = r'.*(?:func |it)(.*?)[:|\(|\s]'
 
     # Static helpers
 
