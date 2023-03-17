@@ -50,8 +50,9 @@ class SwiftFile(object):
         List of test extracted from the parsed methods.
         :return: array of strings
         """
-        return list(filter(lambda method: method.startswith(ParsingHelpers.TEST_METHOD_PREFIX) or method.startswith(ParsingHelpers.QUICK_TEST_METHOD_PREFIX),
-                           self.methods))
+        return list(filter(lambda method:
+            method.startswith(ParsingHelpers.TEST_METHOD_PREFIX) or method.startswith(ParsingHelpers.QUICK_IT_TEST_METHOD_PREFIX) or method.startswith(ParsingHelpers.QUICK_IT_BEHAVE_TEST_METHOD_PREFIX)
+        , self.methods))
 
 
 class ProjectPathsOverride(object):
